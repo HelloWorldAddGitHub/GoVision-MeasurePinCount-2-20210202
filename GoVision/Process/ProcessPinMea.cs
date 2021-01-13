@@ -63,7 +63,9 @@ namespace GoVision
 
 
                 //***********************测量****************************
+                image = MeasureMgr.GetInstance().ImagePre(image);
                 MeasureMgr.GetInstance().MeasureAll(image, row, column, angle);
+                ctl.AddToStack(image);
 
                 //显示数据
                 int hasCount = 0, meaCount = 0;

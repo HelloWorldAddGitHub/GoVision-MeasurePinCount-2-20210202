@@ -103,6 +103,13 @@ namespace GoVision
             }
         }
 
+        public HObject ImagePre(HObject image)
+        {
+            HObject imageScaled;
+            HOperatorSet.ScaleImage(image, out imageScaled, 3.1875, -191);
+            return imageScaled;
+        }
+
         public void MeasureAll(HObject image, double row, double column, double radian)
         {
             foreach (var mea in MeasureList)

@@ -1452,10 +1452,11 @@ namespace GoVision
 
 
                 //mea.MeasurePos(vision.imgSrc);
-
-                mea.MeasurePinCount(vision.imgSrc, mea.CenterRow, mea.CenterColumn, mea.Radian, out mea.LineEdge, out mea.ContourOk);
+                HObject image = MeasureMgr.GetInstance().ImagePre(vision.imgSrc);
+                mea.MeasurePinCount(image, mea.CenterRow, mea.CenterColumn, mea.Radian, out mea.LineEdge, out mea.ContourOk);
                 mea.PinCount = mea.CountPinMea;
 
+                visionControl1.AddToStack(image);
                 visionControl1.DisplayResults();
             }
         }
@@ -1657,7 +1658,9 @@ namespace GoVision
 
                 if (row.Length > 0)
                 {
-                    MeasureMgr.GetInstance().MeasureAll(vision.imgSrc, row, column, angle);
+                    HObject image = MeasureMgr.GetInstance().ImagePre(vision.imgSrc);
+                    MeasureMgr.GetInstance().MeasureAll(image, row, column, angle);
+                    visionControl1.AddToStack(image);
                 }
             }
             else

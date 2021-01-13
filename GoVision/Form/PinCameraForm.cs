@@ -1623,10 +1623,9 @@ namespace GoVision
                         //mea.MeasurePos(image);
 
                         HTuple homMat2D;
-                        //HOperatorSet.HomMat2dIdentity(out homMat2D);
-                        //HOperatorSet.HomMat2dTranslate(homMat2D, mea.CenterRow - row, mea.CenterColumn - column, out homMat2D);
-                        //HOperatorSet.HomMat2dRotate(homMat2D, 0 - radModel, mea.CenterRow - row, mea.CenterColumn - column, out homMat2D);
-                        HOperatorSet.VectorAngleToRigid(row, column, radModel, mea.CenterRow, mea.CenterColumn, mea.Radian, out homMat2D);
+                        HOperatorSet.HomMat2dIdentity(out homMat2D);
+                        HOperatorSet.HomMat2dTranslate(homMat2D, mea.CenterRow - row, mea.CenterColumn - column, out homMat2D);
+                        //HOperatorSet.VectorAngleToRigid(row, column, radModel, mea.CenterRow, mea.CenterColumn, mea.Radian, out homMat2D);
 
                         mea.PosHomMat2d = homMat2D;
                         mea.PosRadianDiff = mea.Radian - radModel;

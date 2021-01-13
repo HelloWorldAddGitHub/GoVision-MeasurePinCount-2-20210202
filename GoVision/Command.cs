@@ -6,7 +6,7 @@ namespace GoVision
     {
         public const string T1 = "03,01,01,0,11;";//平台定位
         public const string T2 = "03,01,02,0,12;";//机械手定位
-        public const string T4 = "03,01,04,0,14;";//机械手定位
+        public const string T4 = "03,01,01,0,14;";//机械手定位
     }
 
     public class Receive
@@ -88,11 +88,11 @@ namespace GoVision
                 {
                     string resPin = SendData.PinCountOK ? "11" : "22";
                     //面积NG数量 位置NG数量
-                    temp = $"01,,04,,01,,00000000,,00000000,,000000{resPin}";
+                    temp = $"01,,01,,01,,00000000,,00000000,,000000{resPin}";
                 }
                 else
                 {
-                    temp = $"01,,04,,00,,00000000,,00000000,,00000000";
+                    temp = $"01,,01,,00,,00000000,,00000000,,00000022";
                 }
 
                 TcpClientMgr.GetInstance().Send(temp);

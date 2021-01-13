@@ -560,8 +560,10 @@ namespace GoVision
             }
 
             //初始化窗口
-            visionControl1.ImageWidth = 5472;
-            visionControl1.ImageHeight = 3648;
+            //visionControl1.ImageWidth = 5472;
+            //visionControl1.ImageHeight = 3648;
+            visionControl1.ImageWidth = 3840;
+            visionControl1.ImageHeight = 2748;
             visionControl1.InitWindow();
 
             ////添加相机并绑定到窗口
@@ -601,8 +603,8 @@ namespace GoVision
             // 隔行背景色
             dgvData.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
 
-            label41.Visible = false;
-            //label41.Text = $@"当前产品-{ProductMgr.GetInstance().ProductName}";
+            //label41.Visible = false;
+            label41.Text = $@"当前产品-{ProductMgr.GetInstance().ProductName}";
             LoadParam();
             LoadShapeModel();
             LoadMeasure();

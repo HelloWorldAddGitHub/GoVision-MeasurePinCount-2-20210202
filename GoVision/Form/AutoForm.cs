@@ -269,9 +269,12 @@ namespace GoVision
             }
 #else
             //添加相机并绑定到窗口
-            VisionMgr.GetInstance().AddCamera(new CameraGige(CameraName.MainCamera));
-            VisionMgr.GetInstance().AddCamera(new CameraGige(CameraName.SideCameraA));
-            VisionMgr.GetInstance().AddCamera(new CameraGige(CameraName.SideCameraB));
+            VisionMgr.GetInstance().AddCamera(new CameraMVision(CameraName.MainCamera));
+            VisionMgr.GetInstance().AddCamera(new CameraMVision(CameraName.SideCameraA));
+            VisionMgr.GetInstance().AddCamera(new CameraMVision(CameraName.SideCameraB));
+            //VisionMgr.GetInstance().AddCamera(new CameraGige(CameraName.MainCamera));
+            //VisionMgr.GetInstance().AddCamera(new CameraGige(CameraName.SideCameraA));
+            //VisionMgr.GetInstance().AddCamera(new CameraGige(CameraName.SideCameraB));
 #endif
 
             //添加视觉步骤
@@ -331,6 +334,11 @@ namespace GoVision
             IniTool.Set(fileName, "CameraName", "MainCamera", CameraName.MainCamera);
             IniTool.Set(fileName, "CameraName", "SideCameraA", CameraName.SideCameraA);
             IniTool.Set(fileName, "CameraName", "SideCameraB", CameraName.SideCameraB);
+            
+            foreach (var cam in VisionMgr.GetInstance().m_dicCamera.Values)
+            {
+                cam.Close();
+            }
         }
 
         private void RoundButton_Main_Click(object sender, EventArgs e)

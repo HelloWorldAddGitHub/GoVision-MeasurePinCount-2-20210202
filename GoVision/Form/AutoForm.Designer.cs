@@ -83,7 +83,7 @@
             this.btnMainCamera.Size = new System.Drawing.Size(120, 40);
             this.btnMainCamera.SpliteButtonWidth = 18;
             this.btnMainCamera.TabIndex = 0;
-            this.btnMainCamera.Text = "主相机";
+            this.btnMainCamera.Text = "针脚相机";
             this.btnMainCamera.UseVisualStyleBackColor = false;
             this.btnMainCamera.Click += new System.EventHandler(this.RoundButton_Main_Click);
             // 

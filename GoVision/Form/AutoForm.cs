@@ -278,7 +278,7 @@ namespace GoVision
 #endif
 
             //添加视觉步骤
-            VisionMgr.GetInstance().AddVisionStep(CameraName.MainCamera, new ProcessMainPos(VisionStepName.MainPos));
+            //VisionMgr.GetInstance().AddVisionStep(CameraName.MainCamera, new ProcessMainPos(VisionStepName.MainPos));
             //VisionMgr.GetInstance().AddVisionStep(CameraName.MainCamera, new ProcessMainMea(VisionStepName.MainMea));
             VisionMgr.GetInstance().AddVisionStep(CameraName.MainCamera, new ProcessPinMea(VisionStepName.PinMea));
             VisionMgr.GetInstance().AddVisionStep(CameraName.SideCameraA, new ProcessSideMea(VisionStepName.SideMeaA));

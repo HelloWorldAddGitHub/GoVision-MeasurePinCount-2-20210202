@@ -574,10 +574,10 @@ namespace GoVision
             //ckbPerprocess.Checked = ProductMgr.GetInstance().Param.IsPerprocess;
 
             //将流程添加到下拉框
-            cmbProcess.Items.Add(VisionStepName.MainPos);
+            //cmbProcess.Items.Add(VisionStepName.MainPos);
             cmbProcess.Items.Add(VisionStepName.PinMea);
             //cmbProcess.Items.Add(VisionStepName.MainMea);
-            cmbProcess.SelectedIndex = 1;
+            cmbProcess.SelectedIndex = 0;
 
             cmbMetric.SelectedIndex = 0;
             cmbOptimization.SelectedIndex = 2;
@@ -1430,7 +1430,7 @@ namespace GoVision
         private void MeasurePos()
         {
             int index = lstMeasureList.SelectedIndex;
-            if (index >= 0 && vision.imgSrc != null)
+            if (index >= 0 && vision.imgSrc != null && vision.imgSrc.IsInitialized())
             {
                 var mea = MeasureMgr.GetInstance().MeasureList[index];
                 mea.ClearResult();

@@ -254,25 +254,31 @@ namespace GoVision
                     //    HOperatorSet.DispObj(MeasureRect, ctl.GetHalconWindow());
                     //}
 
+                    string color = "blue";
+                    if (IntraDistance != null && IntraDistance.Length > 0 && IntraDistance.D == 0)
+                    {
+                        color = "green";
+                    }
+
                     if (Lines != null && Lines.IsInitialized())
                     {
-                        HOperatorSet.SetColor(m_visionControl.GetHalconWindow(), "blue");
+                        HOperatorSet.SetColor(m_visionControl.GetHalconWindow(), color);
                         HOperatorSet.DispObj(Lines, ctl.GetHalconWindow());
                     }
 
                     if (IntraDistance != null && IntraDistance.Length > 0)
                     {
-                        if (IntraDistance.Type == HTupleType.STRING)
-                        {
-                            HDevelopExport.disp_message(m_visionControl.GetHalconWindow(),
-                                IntraDistance, "window", 20, -1, "green", "false");
-                        }
-                        else
-                        {
-                            var value = SideCameraCalibData.PixelToMm(IntraDistance);
-                            HDevelopExport.disp_message(m_visionControl.GetHalconWindow(),
-                                $"{value:F2}", "window", 20, -1, "green", "false");
-                        }
+                        //if (IntraDistance.Type == HTupleType.STRING)
+                        //{
+                        //    HDevelopExport.disp_message(m_visionControl.GetHalconWindow(),
+                        //        IntraDistance, "window", 20, -1, "green", "false");
+                        //}
+                        //else
+                        //{
+                        var value = SideCameraCalibData.PixelToMm(IntraDistance);
+                        HDevelopExport.disp_message(m_visionControl.GetHalconWindow(),
+                            $"{value:F2}", "window", 20, -1, color, "false");
+                        //}
                     }
                 }
             }

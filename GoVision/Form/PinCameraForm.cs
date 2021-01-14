@@ -1334,6 +1334,7 @@ namespace GoVision
             var mea = new MeasureMgr.MeasurePin();
             mea.CenterRow = row;
             mea.CenterColumn = column;
+            mea.Radian = phi;
             mea.Width = length1 * 2;
             mea.Height = length2 * 2;
             //mea.Gen(row, column, 0);
@@ -1412,7 +1413,7 @@ namespace GoVision
             HTuple degree;
             HOperatorSet.TupleDeg(mea.Radian, out degree);
             nudMeasureRoiPhi.Value = (decimal)degree.D;
-            nudCountPinMea.Value = (decimal)mea.CountPinMea.I;
+            nudCountPinMea.Value = (decimal)mea.PinCount;
 
             nudThreshold.Value = (decimal)mea.Threshold;
             nudSigma.Value = (decimal)mea.Sigma;
@@ -1438,10 +1439,10 @@ namespace GoVision
                 mea.Sigma = (double)nudSigma.Value;
                 mea.Threshold = (double)nudThreshold.Value;
 
-                //mea.PinCount = (int)nudCountPinMea.Value;
+                mea.PinCount = (int)nudCountPinMea.Value;
                 //mea.PinDistance = PlatformCalibData.MmToPixel((double)nudPinDistance.Value);
-                //mea.LimiteDiameterMax = (double)nudDiameterMax.Value;
-                //mea.LimiteDiameterMin = (double)nudDiameterMin.Value;
+                mea.LimiteDiameterMax = (double)nudDiameterMax.Value;
+                mea.LimiteDiameterMin = (double)nudDiameterMin.Value;
                 //mea.LimiteLeft = (double)nudMaginLeft.Value;
                 //mea.LimiteRight = (double)nudMaginRight.Value;
                 //mea.LimiteTopMin = (double)nudMaginTop.Value;
@@ -1453,8 +1454,22 @@ namespace GoVision
 
                 //mea.MeasurePos(vision.imgSrc);
                 HObject image = MeasureMgr.GetInstance().ImagePre(vision.imgSrc);
-                mea.MeasurePinCount(image, mea.CenterRow, mea.CenterColumn, mea.Radian, out mea.LineEdge, out mea.ContourOk);
-                mea.PinCount = mea.CountPinMea;
+                HObject contour;
+                mea.MeasurePinCount(image, mea.CenterRow, mea.CenterColumn, mea.Radian, out mea.LineEdge, out contour);
+
+                if (nudCountPinMea.Value <= 0)
+                {
+                    mea.PinCount = mea.CountPinMea;
+                }
+
+                if (mea.PinCount == mea.CountPinMea)
+                {
+                    mea.ContourOk = contour;
+                }
+                else
+                {
+                    mea.ContourAreaNG = contour;
+                }
 
                 visionControl1.AddToStack(image);
                 visionControl1.DisplayResults();
@@ -1524,9 +1539,9 @@ namespace GoVision
 
                 double width = (double)nudMeasureRoiWidth.Value;
                 double height = (double)nudMeasureRoiHeight.Value;
-                double disLine = (double)nudCountPinMea.Value;
-                double disPin = (double)nudPinDistance.Value;
-                int count = (int)nudCountPinMea.Value;
+                //double disLine = (double)nudCountPinMea.Value;
+                //double disPin = (double)nudPinDistance.Value;
+                //int count = (int)nudCountPinMea.Value;
 
                 mea.CenterRow = rowCenter;
                 mea.CenterColumn = columnCenter;

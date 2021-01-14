@@ -794,24 +794,20 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label32);
-            this.groupBox6.Controls.Add(this.label39);
             this.groupBox6.Controls.Add(this.label38);
             this.groupBox6.Controls.Add(this.label36);
             this.groupBox6.Controls.Add(this.label40);
             this.groupBox6.Controls.Add(this.label37);
-            this.groupBox6.Controls.Add(this.nudMaginTopMax);
-            this.groupBox6.Controls.Add(this.nudMaginTop);
             this.groupBox6.Controls.Add(this.nudMaginLeft);
             this.groupBox6.Controls.Add(this.label33);
             this.groupBox6.Controls.Add(this.label35);
+            this.groupBox6.Controls.Add(this.nudMaginTopMax);
+            this.groupBox6.Controls.Add(this.nudMaginTop);
             this.groupBox6.Controls.Add(this.nudPinCount);
-            this.groupBox6.Controls.Add(this.nudDiameterMax);
             this.groupBox6.Controls.Add(this.nudMaginRight);
             this.groupBox6.Controls.Add(this.nudPinDistance);
-            this.groupBox6.Controls.Add(this.nudDiameterMin);
             this.groupBox6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox6.Location = new System.Drawing.Point(8, 339);
+            this.groupBox6.Location = new System.Drawing.Point(4, 480);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
@@ -824,22 +820,24 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(160, 114);
+            this.label32.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label32.Location = new System.Drawing.Point(137, 198);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(82, 15);
+            this.label32.Size = new System.Drawing.Size(116, 18);
             this.label32.TabIndex = 1;
-            this.label32.Text = "最大下边距";
+            this.label32.Text = "针脚最大宽度";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(4, 114);
+            this.label39.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label39.Location = new System.Drawing.Point(137, 165);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(82, 15);
+            this.label39.Size = new System.Drawing.Size(116, 18);
             this.label39.TabIndex = 1;
-            this.label39.Text = "最小下边距";
+            this.label39.Text = "针脚最小宽度";
             // 
             // label38
             // 
@@ -883,36 +881,19 @@
             // 
             // nudMaginTopMax
             // 
-            this.nudMaginTopMax.DecimalPlaces = 2;
-            this.nudMaginTopMax.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.nudMaginTopMax.Location = new System.Drawing.Point(253, 110);
+            this.nudMaginTopMax.Location = new System.Drawing.Point(253, 113);
             this.nudMaginTopMax.Margin = new System.Windows.Forms.Padding(4);
             this.nudMaginTopMax.Name = "nudMaginTopMax";
-            this.nudMaginTopMax.Size = new System.Drawing.Size(60, 25);
+            this.nudMaginTopMax.Size = new System.Drawing.Size(85, 25);
             this.nudMaginTopMax.TabIndex = 0;
-            this.nudMaginTopMax.Value = new decimal(new int[] {
-            16,
-            0,
-            0,
-            65536});
             this.nudMaginTopMax.ValueChanged += new System.EventHandler(this.nudMaginTopMax_ValueChanged);
             // 
             // nudMaginTop
             // 
-            this.nudMaginTop.DecimalPlaces = 2;
-            this.nudMaginTop.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.nudMaginTop.Location = new System.Drawing.Point(96, 110);
+            this.nudMaginTop.Location = new System.Drawing.Point(79, 113);
             this.nudMaginTop.Margin = new System.Windows.Forms.Padding(4);
             this.nudMaginTop.Name = "nudMaginTop";
-            this.nudMaginTop.Size = new System.Drawing.Size(60, 25);
+            this.nudMaginTop.Size = new System.Drawing.Size(85, 25);
             this.nudMaginTop.TabIndex = 0;
             this.nudMaginTop.Value = new decimal(new int[] {
             2,
@@ -977,22 +958,16 @@
             // 
             // nudDiameterMax
             // 
-            this.nudDiameterMax.DecimalPlaces = 2;
-            this.nudDiameterMax.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.nudDiameterMax.Location = new System.Drawing.Point(80, 50);
+            this.nudDiameterMax.Location = new System.Drawing.Point(261, 198);
             this.nudDiameterMax.Margin = new System.Windows.Forms.Padding(4);
+            this.nudDiameterMax.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.nudDiameterMax.Name = "nudDiameterMax";
-            this.nudDiameterMax.Size = new System.Drawing.Size(60, 25);
+            this.nudDiameterMax.Size = new System.Drawing.Size(85, 25);
             this.nudDiameterMax.TabIndex = 0;
-            this.nudDiameterMax.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            65536});
             this.nudDiameterMax.ValueChanged += new System.EventHandler(this.nudDiameterMax_ValueChanged);
             // 
             // nudMaginRight
@@ -1037,16 +1012,15 @@
             // 
             // nudDiameterMin
             // 
-            this.nudDiameterMin.DecimalPlaces = 2;
-            this.nudDiameterMin.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.nudDiameterMin.Location = new System.Drawing.Point(253, 50);
+            this.nudDiameterMin.Location = new System.Drawing.Point(261, 165);
             this.nudDiameterMin.Margin = new System.Windows.Forms.Padding(4);
+            this.nudDiameterMin.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.nudDiameterMin.Name = "nudDiameterMin";
-            this.nudDiameterMin.Size = new System.Drawing.Size(60, 25);
+            this.nudDiameterMin.Size = new System.Drawing.Size(85, 25);
             this.nudDiameterMin.TabIndex = 0;
             this.nudDiameterMin.Value = new decimal(new int[] {
             4,
@@ -1069,7 +1043,7 @@
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(8, 205);
+            this.groupBox4.Location = new System.Drawing.Point(4, 346);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
@@ -1253,7 +1227,7 @@
             // 
             // btnMeasureTest
             // 
-            this.btnMeasureTest.Location = new System.Drawing.Point(7, 299);
+            this.btnMeasureTest.Location = new System.Drawing.Point(3, 440);
             this.btnMeasureTest.Margin = new System.Windows.Forms.Padding(4);
             this.btnMeasureTest.Name = "btnMeasureTest";
             this.btnMeasureTest.Size = new System.Drawing.Size(75, 30);
@@ -1264,7 +1238,7 @@
             // 
             // btnSaveMeasure
             // 
-            this.btnSaveMeasure.Location = new System.Drawing.Point(87, 299);
+            this.btnSaveMeasure.Location = new System.Drawing.Point(83, 440);
             this.btnSaveMeasure.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveMeasure.Name = "btnSaveMeasure";
             this.btnSaveMeasure.Size = new System.Drawing.Size(163, 30);
@@ -1275,7 +1249,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Controls.Add(this.label39);
             this.groupBox3.Controls.Add(this.label50);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.nudMeasureRoiColumn);
@@ -1283,9 +1259,11 @@
             this.groupBox3.Controls.Add(this.nudMeasureRoiHeight);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.nudMeasureRoiRow);
+            this.groupBox3.Controls.Add(this.nudDiameterMax);
             this.groupBox3.Controls.Add(this.label31);
             this.groupBox3.Controls.Add(this.nudMeasureRoiPhi);
             this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.nudDiameterMin);
             this.groupBox3.Controls.Add(this.nudMeasureRoiWidth);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.cmbInterpolation);
@@ -1294,7 +1272,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(360, 119);
+            this.groupBox3.Size = new System.Drawing.Size(360, 227);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "测量矩形 pixel";
@@ -1314,7 +1292,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label50.Location = new System.Drawing.Point(176, 84);
+            this.label50.Location = new System.Drawing.Point(173, 131);
             this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(80, 18);
@@ -1349,7 +1327,7 @@
             // 
             // nudCountPinMea
             // 
-            this.nudCountPinMea.Location = new System.Drawing.Point(261, 80);
+            this.nudCountPinMea.Location = new System.Drawing.Point(261, 129);
             this.nudCountPinMea.Margin = new System.Windows.Forms.Padding(4);
             this.nudCountPinMea.Minimum = new decimal(new int[] {
             100,
@@ -1481,7 +1459,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label25.Location = new System.Drawing.Point(151, 184);
+            this.label25.Location = new System.Drawing.Point(138, 297);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(44, 18);
@@ -1496,7 +1474,7 @@
             "nearest_neighbor",
             "bicubic",
             "bilinear"});
-            this.cmbInterpolation.Location = new System.Drawing.Point(224, 184);
+            this.cmbInterpolation.Location = new System.Drawing.Point(211, 297);
             this.cmbInterpolation.Margin = new System.Windows.Forms.Padding(4);
             this.cmbInterpolation.Name = "cmbInterpolation";
             this.cmbInterpolation.Size = new System.Drawing.Size(135, 23);

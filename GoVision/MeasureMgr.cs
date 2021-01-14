@@ -186,8 +186,11 @@ namespace GoVision
 
             public double Threshold = 40;
 
-            //测量数量和间距
-            public int PinCount = 10;
+            //需要测量的针脚数量
+            public int PinCount /*= 10*/;
+            public int CountPinMea;//测量出来的针脚数量
+            public double LimiteDiameterMax;
+            public double LimiteDiameterMin;
 
             public double PinDistance = 48.54;//pixel
 
@@ -203,7 +206,7 @@ namespace GoVision
             public HTuple CountAreaNG;//面积NG数量
             public HTuple CountPosNG;//位置NG数量
 
-            public HTuple CountPinMea;//测量出来的针脚数量
+
 
             [NonSerialized]
             public HObject LineEdge;
@@ -218,9 +221,6 @@ namespace GoVision
             public HObject ContourPosNG;
 
             //测量碳点位置界限，mm
-            public double LimiteDiameterMax = 0.8;
-
-            public double LimiteDiameterMin = 0.4;
             public double LimiteLeft = 0.1;
             public double LimiteRight = 0.1;
             public double LimiteTopMin = 0.1;
@@ -254,12 +254,36 @@ namespace GoVision
                     out rowEdgeSecond, out columnEdgeSecond, out amplitudeSecond,
                     out intraDistance, out interDistance);
 
+                if (intraDistance.Length > 0)
+                {
+                    HTuple minMea = 0, maxMea = 0;
+                    HOperatorSet.TupleMin(intraDistance, out minMea);
+                    HOperatorSet.TupleMax(intraDistance, out maxMea);
+
+                    if (LimiteDiameterMin <= 0)
+                    {
+                        LimiteDiameterMin = minMea - 5;
+                    }
+
+                    if (LimiteDiameterMax <= 0)
+                    {
+                        LimiteDiameterMax = maxMea * 1.5;
+                    }
+                }
+
                 //测量出来的针脚数量
-                CountPinMea = rowEdgeFirst.Length;
+                CountPinMea = 0;
 
                 //显示
-                for (int j = 0; j < rowEdgeFirst.Length; j++)
+                for (int j = 0; j < intraDistance.Length; j++)
                 {
+                    if (intraDistance[j] < LimiteDiameterMin || intraDistance[j] > LimiteDiameterMax)
+                    {
+                        continue;
+                    }
+
+                    CountPinMea++;
+
                     HTuple rowEdgeFirstBegin;
                     HTuple rowEdgeFirstEnd;
                     HTuple rowEdgeSecondBegin;

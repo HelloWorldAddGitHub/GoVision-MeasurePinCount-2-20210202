@@ -214,11 +214,12 @@ namespace GoVision
             {
                 Task.Run(() =>
                 {
-                    string imageName = $"{DateTime.Now:HHmmss}.tiff";
+                    //string imageName = $"{DateTime.Now:HHmmss}.tiff";
+                    string imageName = $"{DateTime.Now:HHmmss}.jpg";
 
                     string res = result ? "OK" : "NG";
-                    string pathSource = $@"{ProductMgr.GetInstance().ProductPath}Images\{DateTime.Now:yyyyMMdd}\{res}\Robot\Source\";
-                    string pathWindow = $@"{ProductMgr.GetInstance().ProductPath}Images\{DateTime.Now:yyyyMMdd}\{res}\Robot\Window\";
+                    string pathSource = $@"{ProductMgr.GetInstance().ProductPath}Images\{DateTime.Now:yyyyMMdd}\{res}\Source\";
+                    string pathWindow = $@"{ProductMgr.GetInstance().ProductPath}Images\{DateTime.Now:yyyyMMdd}\{res}\Window\";
 
                     if (!System.IO.Directory.Exists(pathSource))
                     {

@@ -106,7 +106,8 @@ namespace GoVision
         public HObject ImagePre(HObject image)
         {
             HObject imageScaled;
-            HOperatorSet.ScaleImage(image, out imageScaled, 3.1875, -191);
+            //HOperatorSet.ScaleImage(image, out imageScaled, 3.1875, -191);
+            HOperatorSet.ScaleImage(image, out imageScaled, 6.375, -382);
             return imageScaled;
         }
 
@@ -183,7 +184,7 @@ namespace GoVision
             //测量参数
             public double Sigma = 1;
 
-            public double Threshold = 20;
+            public double Threshold = 40;
 
             //测量数量和间距
             public int PinCount = 10;

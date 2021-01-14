@@ -68,10 +68,16 @@ namespace GoVision
                 ctl.AddToStack(image);
 
                 //显示数据
+                bool resRoi = true;//每个测量区域都做判断
                 int hasCount = 0, meaCount = 0;
                 for (int i = 0; i < MeasureMgr.GetInstance().MeasureList.Count; i++)
                 {
                     var mea = MeasureMgr.GetInstance().MeasureList[i];
+
+                    if (mea.PinCount != mea.CountPinMea)
+                    {
+                        resRoi = false;
+                    }
 
                     hasCount += mea.PinCount;
                     //meaCount += mea.CountOK + mea.CountAreaNG + mea.CountPosNG;
@@ -89,7 +95,7 @@ namespace GoVision
                 }
 
                 string color = "green";
-                if (hasCount == meaCount)
+                if (resRoi && hasCount == meaCount)
                 {
                     color = "green";
                     SendData.PinCountOK = true;

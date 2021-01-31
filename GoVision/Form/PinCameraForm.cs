@@ -1471,7 +1471,7 @@ namespace GoVision
                     mea.ContourAreaNG = contour;
                 }
 
-                visionControl1.AddToStack(image);
+                //visionControl1.AddToStack(image);
                 visionControl1.DisplayResults();
             }
         }
@@ -1643,6 +1643,7 @@ namespace GoVision
                         //HOperatorSet.VectorAngleToRigid(row, column, radModel, mea.CenterRow, mea.CenterColumn, mea.Radian, out homMat2D);
 
                         mea.PosHomMat2d = homMat2D;
+                        mea.ModelRadian = radModel;
                         mea.PosRadianDiff = mea.Radian - radModel;
                         //mea.DisHanldeRow = -ProductMgr.GetInstance().Param.SecondRow;
                     }
@@ -1674,7 +1675,7 @@ namespace GoVision
                 {
                     HObject image = MeasureMgr.GetInstance().ImagePre(vision.imgSrc);
                     MeasureMgr.GetInstance().MeasureAll(image, row, column, angle);
-                    visionControl1.AddToStack(image);
+                    //visionControl1.AddToStack(image);
                 }
             }
             else

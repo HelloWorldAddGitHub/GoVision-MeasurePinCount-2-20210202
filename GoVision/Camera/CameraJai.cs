@@ -133,7 +133,7 @@ namespace GoVision
             return false;
         }
 
-        public override void SetGrabParam(string strParam, int nValue)
+        public override void SetGrabParam(string strParam, double nValue)
         {
             if (!Instance.IsOpen)
             {

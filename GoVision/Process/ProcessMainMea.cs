@@ -310,7 +310,7 @@ namespace GoVision
                 SaveParam();
             }
 
-            m_ExposureTime = IniTool.GetInt(fileName, "camera", "exposure", 0);
+            m_ExposureTime = IniTool.GetInt(fileName, "camera", "exposure", 1000);
 
             return true;
         }

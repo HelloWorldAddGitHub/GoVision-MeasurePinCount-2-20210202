@@ -54,7 +54,7 @@ namespace GoVision
         /// </summary>
         /// <param name="strParam"></param>
         /// <param name="nValue"></param>
-        public abstract void SetGrabParam(string strParam, int nValue);
+        public abstract void SetGrabParam(string strParam, double nValue);
 
         /// <summary>
         /// 触发一次异步采集

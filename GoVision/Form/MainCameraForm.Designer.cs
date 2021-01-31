@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCameraForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.grpData = new System.Windows.Forms.GroupBox();
@@ -302,8 +302,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.grpLog);
-            this.splitContainer1.Size = new System.Drawing.Size(705, 192);
-            this.splitContainer1.SplitterDistance = 326;
+            this.splitContainer1.Size = new System.Drawing.Size(705, 206);
+            this.splitContainer1.SplitterDistance = 325;
             this.splitContainer1.TabIndex = 3;
             // 
             // grpData
@@ -312,7 +312,7 @@
             this.grpData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpData.Location = new System.Drawing.Point(0, 0);
             this.grpData.Name = "grpData";
-            this.grpData.Size = new System.Drawing.Size(326, 192);
+            this.grpData.Size = new System.Drawing.Size(325, 206);
             this.grpData.TabIndex = 0;
             this.grpData.TabStop = false;
             this.grpData.Text = "数据";
@@ -323,39 +323,39 @@
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvData.Location = new System.Drawing.Point(3, 17);
             this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowTemplate.Height = 23;
-            this.dgvData.Size = new System.Drawing.Size(320, 172);
+            this.dgvData.Size = new System.Drawing.Size(319, 186);
             this.dgvData.TabIndex = 0;
             // 
             // grpLog
@@ -364,7 +364,7 @@
             this.grpLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpLog.Location = new System.Drawing.Point(0, 0);
             this.grpLog.Name = "grpLog";
-            this.grpLog.Size = new System.Drawing.Size(375, 192);
+            this.grpLog.Size = new System.Drawing.Size(376, 206);
             this.grpLog.TabIndex = 0;
             this.grpLog.TabStop = false;
             this.grpLog.Text = "日志";
@@ -377,7 +377,7 @@
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtLog.Size = new System.Drawing.Size(369, 172);
+            this.txtLog.Size = new System.Drawing.Size(370, 186);
             this.txtLog.TabIndex = 0;
             this.txtLog.TextChanged += new System.EventHandler(this.txtLog_TextChanged);
             // 
@@ -748,8 +748,8 @@
             this.tbpMeasure.Controls.Add(this.lstMeasureList);
             this.tbpMeasure.Location = new System.Drawing.Point(4, 26);
             this.tbpMeasure.Name = "tbpMeasure";
-            this.tbpMeasure.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpMeasure.Size = new System.Drawing.Size(287, 534);
+            this.tbpMeasure.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpMeasure.Size = new System.Drawing.Size(517, 548);
             this.tbpMeasure.TabIndex = 2;
             this.tbpMeasure.Text = "测量";
             this.tbpMeasure.UseVisualStyleBackColor = true;
@@ -1350,12 +1350,12 @@
             131072});
             this.nudMeasureRoiPhi.Location = new System.Drawing.Point(66, 64);
             this.nudMeasureRoiPhi.Maximum = new decimal(new int[] {
-            360,
+            35999,
             0,
             0,
-            0});
+            131072});
             this.nudMeasureRoiPhi.Minimum = new decimal(new int[] {
-            360,
+            180,
             0,
             0,
             -2147483648});
@@ -1496,9 +1496,9 @@
             this.groupBox12.Controls.Add(this.ckbAdjustImage);
             this.groupBox12.Controls.Add(this.ckbPerprocess);
             this.groupBox12.Location = new System.Drawing.Point(2, 424);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox12.Size = new System.Drawing.Size(279, 114);
             this.groupBox12.TabIndex = 87;
             this.groupBox12.TabStop = false;
@@ -1533,7 +1533,7 @@
             0,
             0});
             this.nudEmphasize.Location = new System.Drawing.Point(95, 47);
-            this.nudEmphasize.Margin = new System.Windows.Forms.Padding(2);
+            this.nudEmphasize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudEmphasize.Maximum = new decimal(new int[] {
             201,
             0,
@@ -1876,8 +1876,8 @@
             this.tbpCreateModel.Controls.Add(this.grpRoi);
             this.tbpCreateModel.Location = new System.Drawing.Point(4, 26);
             this.tbpCreateModel.Name = "tbpCreateModel";
-            this.tbpCreateModel.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCreateModel.Size = new System.Drawing.Size(287, 534);
+            this.tbpCreateModel.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpCreateModel.Size = new System.Drawing.Size(517, 548);
             this.tbpCreateModel.TabIndex = 3;
             this.tbpCreateModel.Text = "创建模板";
             this.tbpCreateModel.UseVisualStyleBackColor = true;
@@ -2800,7 +2800,7 @@
             this.tabControl1.Location = new System.Drawing.Point(711, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(295, 564);
+            this.tabControl1.Size = new System.Drawing.Size(525, 578);
             this.tabControl1.TabIndex = 4;
             // 
             // visionControl1
@@ -2821,7 +2821,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1007, 570);
+            this.ClientSize = new System.Drawing.Size(1007, 584);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.visionControl1);
             this.Controls.Add(this.tabControl1);

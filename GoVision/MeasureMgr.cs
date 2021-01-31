@@ -120,7 +120,7 @@ namespace GoVision
                 HTuple homMat2D;
                 HOperatorSet.AffineTransPixel(mea.PosHomMat2d, row, column, out rowTrans, out columnTrans);
                 HOperatorSet.HomMat2dIdentity(out homMat2D);
-                HOperatorSet.HomMat2dRotate(homMat2D, radian, row, column, out homMat2D);
+                HOperatorSet.HomMat2dRotate(homMat2D, radian - mea.ModelRadian, row, column, out homMat2D);
                 HOperatorSet.AffineTransPixel(homMat2D, rowTrans, columnTrans, out rowTrans, out columnTrans);
 
 
@@ -164,6 +164,7 @@ namespace GoVision
             public double[] PosHomMat2d;
 
             public double PosRadianDiff;
+            public double ModelRadian;
 
             //测量矩形
             public double CenterRow;

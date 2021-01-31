@@ -156,7 +156,7 @@ namespace GoVision
         /// </summary>
         /// <param name="strParam"></param>
         /// <param name="nValue"></param>
-        public override void SetGrabParam(string strParam, int nValue)
+        public override void SetGrabParam(string strParam, double nValue)
         {
             try
             {

@@ -304,7 +304,8 @@ namespace GoVision
         {
             try
             {
-                m_Camera.SetGrabParam("ExposureTimeAbs", nExp);
+                //m_Camera.SetGrabParam("ExposureTimeAbs", nExp);
+                m_Camera.SetGrabParam("ExposureTime", nExp);
                 m_ExposureTime = nExp;
 
                 if (!System.IO.Directory.Exists(m_strDir))
